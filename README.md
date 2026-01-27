@@ -1,2 +1,1 @@
-# sdsr
-Code for SDSR (Spectral Divide-and-Conquer), a scalable algorithm for species tree reconstruction.
+# SDSR - Spectral Divide-and-conquer approach for Species tree Reconstruction
