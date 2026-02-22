@@ -1,29 +1,5 @@
 from sdsr_inner_functions import *
-#from Bio import AlignIO
-#from Bio import Phylo
-#from io import StringIO
-#import spectraltree
-#import numpy as np
-#import dendropy
-#from k_means_constrained import KMeansConstrained
-#from more_itertools import locate
-#import time
 import os
-#from dendropy import Tree, TaxonNamespace
-#import ete3
-#import subprocess
-#import psutil
-#from concurrent.futures import ProcessPoolExecutor, as_completed
-#import threading
-#import datetime
-#import platform
-#from sklearn.metrics.cluster import rand_score
-#import sys
-#import shutil
-#import copy  
-#import time
-#from sdsr_inner_functions import *
-#from sdsr_inner_functions import STDR_for_Multiple_Alignments
 
 
 stdr_instant = STDR_for_Multiple_Alignments(
