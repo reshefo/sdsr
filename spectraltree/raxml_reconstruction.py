@@ -14,6 +14,7 @@ SPECTRALTREE_DIR_PATH = os.path.dirname(os.path.abspath(__file__))
 SPECTRALTREE_LIB_PATH = os.path.join(SPECTRALTREE_DIR_PATH, "libs")
 SPECTRALTREE_RAXML_PATH = os.path.join(SPECTRALTREE_LIB_PATH, "raxmlHPC_bin")
 
+
 class RAxML(ReconstructionMethod):
     """Reconstructs a binary tree using the RAxML program.
 
@@ -37,7 +38,8 @@ class RAxML(ReconstructionMethod):
             raxml_path = os.path.join(SPECTRALTREE_RAXML_PATH,'raxmlHPC-SSE3-linux')
         else:
             raise OSError(f"Cannot identify operating system {platform.system()}.")
-
+        print('raxml_path')
+        print(raxml_path)
         self._rx = raxml.RaxmlRunner(raxml_path=raxml_path)
 
     def __call__(self, sequences, taxa_metadata=None):
@@ -47,6 +49,7 @@ class RAxML(ReconstructionMethod):
             data.taxon_namespace = dendropy.TaxonNamespace(taxa_metadata)
         else:
             data = sequences
+
 
         tree = self._rx.estimate_tree(data, raxml_args=self.raxml_args)
         tree.is_rooted = False

@@ -1,10 +1,9 @@
 import time
 from Bio import AlignIO
 import numpy as np
-
 from Bio import AlignIO
 from Bio import Phylo
-from io import StringIO
+#from io import StringIO
 import spectraltree
 import numpy as np
 import dendropy
