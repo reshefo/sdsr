@@ -52,12 +52,12 @@ python sdsr_runner.py
 
 
 ### Troubleshooting
-If the binaries don't exacutable:
+If the binaries aren't executable:
 
 ```bash
 # For RAxML
 chmod +x spectraltree/spectraltree_libs/raxml_bins/raxmlHPC-SSE3-linux
 
 # For ASTRAL
-chmod +x spectraltree/spectraltree_libs/astral_bin/astral.4.10.12.jar
+chmod +x spectraltree/spectraltree_libs/astral_bin/astral4
 ```
