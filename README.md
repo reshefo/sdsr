@@ -9,8 +9,11 @@ SDSR (Spectral Divide-and-conquer approach for Species tree Reconstruction) is d
 ## Installation
 
 ### Prerequisites
-- Python 3.7 or higher
+- Python 3.7 or higher (recommended: 3.11 or 3.12)
 - Linux or WSL
+
+> Note: Some dependencies (e.g., `ete3`) rely on the `cgi` module which was removed in Python 3.13+.  
+> Therefore Python 3.13+ is currently not supported.
 
 ### Setup
 
@@ -20,7 +23,7 @@ git clone https://github.com/reshefo/sdsr.git
 cd sdsr
 ```
 
-2. Install Python dependencies:
+Install Python dependencies:
 ```bash
 pip install -r requirements.txt
 ```
@@ -48,7 +51,6 @@ The reconstructed tree will be saved as `sdsr_tree.newick`.
 python sdsr_runner.py
 ```
 - The reconstructed tree will be saved as `sdsr_tree.newick`
-
 
 
 ### Troubleshooting

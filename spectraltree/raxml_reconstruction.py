@@ -7,7 +7,6 @@ from dendropy.interop import raxml
 import numpy as np
 
 from . import utils
-from .reconstruct_tree import ReconstructionMethod
 from .similarities import JC_distance_matrix
 
 SPECTRALTREE_DIR_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -15,7 +14,7 @@ SPECTRALTREE_LIB_PATH = os.path.join(SPECTRALTREE_DIR_PATH, "libs")
 SPECTRALTREE_RAXML_PATH = os.path.join(SPECTRALTREE_LIB_PATH, "raxmlHPC_bin")
 
 
-class RAxML(ReconstructionMethod):
+class RAxML:
     """Reconstructs a binary tree using the RAxML program.
 
     See here https://cme.h-its.org/exelixis/web/software/raxml/.
