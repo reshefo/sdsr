@@ -23,9 +23,15 @@ git clone https://github.com/reshefo/sdsr.git
 cd sdsr
 ```
 
-Install Python dependencies:
+2. Create venv in your home directory (recommended)
 ```bash
-pip install -r requirements.txt
+python3 -m venv ~/sdsr_venv
+source ~/sdsr_venv/bin/activate
+```
+
+3. Install Python dependencies:
+```bash
+pip3 install -r requirements.txt
 ```
 
 ## Usage
@@ -43,9 +49,10 @@ The reconstructed tree will be saved as `sdsr_tree.newick`.
 
 ### Running with Your Data
 
-- Place your alignment files in the `alignments/` directory
-- Alignments should be in a supported format (FASTA, PHYLIP, etc.)
-- Open `sdsr_runner.py` and configure the paramerts as needed.
+- Place your alignment files in the `alignments/` directory.
+  - Default format: multiple MSAs in a single PHYLIP file.
+  - To use multiple separate PHYLIP files, set the `format_type` parameter to `"phylip_multiple_genes_from_different_files"`.
+- Open `sdsr_runner.py` and configure the other parameters as needed.
 - Run the reconstruction:
 ```bash
 python sdsr_runner.py
