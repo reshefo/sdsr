@@ -12,8 +12,6 @@ SDSR (Spectral Divide-and-conquer approach for Species tree Reconstruction) is d
 - Python 3.7 or higher (recommended: 3.11 or 3.12)
 - Linux or WSL
 
-> Note: Some dependencies (e.g., `ete3`) rely on the `cgi` module which was removed in Python 3.13+.  
-> Therefore Python 3.13+ is currently not supported.
 
 ### Setup
 

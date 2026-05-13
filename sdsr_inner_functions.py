@@ -12,7 +12,6 @@ from more_itertools import locate
 import time
 import os
 from dendropy import Tree, TaxonNamespace
-import ete3
 import subprocess
 import psutil
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -82,9 +81,8 @@ class STDR_for_Multiple_Alignments():
     
 
     def export_tree(self, tree):
-        ete_tree_to_export = ete3.Tree(str(tree)+';', format=1) # replace lenth with nan or missing lenth in 1, accure in astral4 (we are interesting in the topology)
         with open(self.path_to_exported_trees, "w") as file:
-            file.write(ete_tree_to_export.write(format=1))
+            file.write(tree.as_string(schema="newick"))
             
     #process functions
     '''
