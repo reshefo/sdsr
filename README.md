@@ -6,10 +6,11 @@ A scalable phylogenetic reconstruction algorithm that uses spectral clustering a
 
 SDSR (Spectral Divide-and-conquer approach for Species tree Reconstruction) is designed for efficient reconstruction of large-scale phylogenetic trees. The method partitions species into smaller subgroups using spectral clustering, reconstructs subtrees independently, and merges them into a complete species tree.
 
+
 ## Installation
 
 ### Prerequisites
-- Python 3.7 or higher (recommended: 3.11 or 3.12)
+- Python 3.7 or higher
 - Linux or WSL
 
 
@@ -21,10 +22,10 @@ git clone https://github.com/reshefo/sdsr.git
 cd sdsr
 ```
 
-2. Create venv in your home directory (recommended)
+2. Optional: create and activate virtual environment
 ```bash
-python3 -m venv ~/sdsr_venv
-source ~/sdsr_venv/bin/activate
+python3 -m venv sdsr_venv
+source sdsr_venv/bin/activate
 ```
 
 3. Install Python dependencies:
@@ -62,9 +63,24 @@ python sdsr_runner.py
 If the binaries aren't executable:
 
 ```bash
-# For RAxML
-chmod +x spectraltree/spectraltree_libs/raxml_bins/raxmlHPC-SSE3-linux
+chmod +x spectraltree/libs/raxmlHPC_bin/raxmlHPC-SSE3-linux
 
-# For ASTRAL
-chmod +x spectraltree/spectraltree_libs/astral_bin/astral4
+chmod +x spectraltree/libs/astral_bin/*
 ```
+
+## Citation
+
+If you use SDSR in your research, please cite:
+
+```bibtex
+@article{reshef2026sdsr,
+  title={SDSR: A Spectral Divide-and-Conquer Approach for Species Tree Reconstruction},
+  author={Reshef, Ortal and Glassman, Ofer and Zuk, Or and Aizenbud, Yariv and Nadler, Boaz and Jaffe, Ariel},
+  year={2026},
+  eprint={2603.10215},
+  archivePrefix={arXiv},
+  primaryClass={q-bio}
+}
+```
+
+For more details, see the full paper: [https://arxiv.org/abs/2603.10215](https://arxiv.org/abs/2603.10215)
