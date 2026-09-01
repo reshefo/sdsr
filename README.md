@@ -39,7 +39,7 @@ pip3 install -r requirements.txt
 
 To verify the installation is working, simply run:
 ```bash
-python sdsr_runner.py
+python3 sdsr_runner.py
 ```
 
 This will run SDSR with the default test alignments included in the repository.
