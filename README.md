@@ -54,7 +54,7 @@ The reconstructed tree will be saved as `sdsr_tree.newick`.
 - Open `sdsr_runner.py` and configure the other parameters as needed.
 - Run the reconstruction:
 ```bash
-python sdsr_runner.py
+python3 sdsr_runner.py
 ```
 - The reconstructed tree will be saved as `sdsr_tree.newick`
 
